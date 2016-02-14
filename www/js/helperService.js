@@ -59,9 +59,10 @@ angular.module('starter')
               ];
 
     var mockExams = [
-                { title: 'Mini-Exam', id: 400 ,url:'data/img/exam.jpg'},
+               
                 { title: 'Practice Exam 1', id: 100 ,url:'data/img/exam.jpg'},
                 { title: 'Practice Exam 2', id: 200 ,url:'data/img/exam.jpg'},
+                { title: 'Warm-up Exam', id: 400 ,url:'data/img/exam.jpg'},
                 { title: 'Certification', id: 300 ,url:'data/img/certified.png'}
                
               ];

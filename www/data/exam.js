@@ -404,7 +404,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "No, not for any region", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Yes, but only for certain regions", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "Yes, but only for certain regions (excluding us-east) and for new objects", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Yes, but only for new objects", "IsAnswer": true },
             { "Id": 1058, "QuestionId": 1010, "Name": "Yes, for all regions", "IsAnswer": false }]
 
     },
@@ -496,7 +496,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Resolve the ELB name to an ip address  and point the website to that ip address", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "There is no direct way to do so, Route53 has to be used", "IsAnswer": false},
-            { "Id": 1057, "QuestionId": 1010, "Name": "Generate a CNAME record for the website pointing to the DNS name of the ELB", "IsAnswer": true }]
+            { "Id": 1057, "QuestionId": 1010, "Name": "Generate a Alias record for the website pointing to the DNS name of the ELB", "IsAnswer": true }]
 
     },
      {
@@ -536,7 +536,7 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "A", "IsAnswer": false},
             { "Id": 1056, "QuestionId": 1010, "Name": "AAAA", "IsAnswer": false},
             { "Id": 1057, "QuestionId": 1010, "Name": "NS", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "CNAME", "IsAnswer": true}]
+            { "Id": 1058, "QuestionId": 1010, "Name": "Alias", "IsAnswer": true}]
 
     },
      {
