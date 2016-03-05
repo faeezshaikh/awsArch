@@ -125,7 +125,7 @@ angular.module('starter', ['ionic', 'starter.controllers','timer','LocalStorageM
 			   state.go('app.topics');
 		   }
 		   else {
-			   state.go('app.topics'); //reverting
+			   state.go('app.chat'); 
 		   }
 		   return $location.path();
 		});

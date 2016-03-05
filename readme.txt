@@ -10,13 +10,111 @@ keytool -genkey -v -keystore  awsArch-key.keystore -alias awsArch- -keyalg RSA -
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore awsArch-key.keystore android-release-unsigned.apk awsArch-
 
 C:\Users\FSHAI\AppData\Local\Android\android-sdk\build-tools\23.0.1\zipalign -v 4 android-release-unsigned.apk AWS-Certified-Arch.apk
+/Users/faeezshaikh/Library/Android/sdk/build-tools/23.0.2/zipalign -v 4 android-release-unsigned.apk AWS-Certified-Arch.apk
 
--------------------
 
+---------------------
 
-1. Start Android Virtual Device from AVD manager (either standalone or from android studio)
+ANDROID SCREENSHOTS
+---------------------
+1. Start Genymotion Emulator --> Custom Phone
+2. sudo ionic run android (This will install the apk on the genymotion emulator).
+3. For Screenshots, Android Studio --> (Android Device monitor) DDMS --> Select emulator --> Camera icon.
+
+(Optional)
+ Start Android Virtual Device from AVD manager (either standalone or from android studio)
 
 2. Install the apk in the emulator using this command:
 ~/Android/~platform-tools/adb install yourfile.apk
 
-3. For Screenshots, Android Studio --> DDMS --> Select emulator --> Camera icon.
+
+-----------------
+IOS SCREENSHOTS
+-----------------
+
+1. sudo ionic build ios
+2. Run in emulator using this command: (Replace .app file)
+
+	ios-sim launch /Users/faeezshaikh/git/awsArch/platforms/ios/build/emulator/AWS-Arch.app -devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6s -cls
+	
+3. Take screenshots from emulator
+4. Use launchkit.io for appstore images	
+
+
+----
+TIPS
+-----
+
+ionic platform remove ios
+ionic platform add ios
+
+
+sudo chmod -R a+rw ios/
+
+
+Remove from Info.plist file
+
+ <key>CFBundleIconFile</key>
+    <string>icon.png</string>
+
+
+---------------------------
+To add Chat module: Start 
+---------------------------
+
+1. Import js and css files in CSS
+
+<!-- Socail Login styling start -->
+  	<link href="lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  	<link href="lib/bootstrap/dist/css/bootstrap-theme.min.css.map" rel="stylesheet">
+  	
+  	<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="lib/bootstrap/dist/css/bootstrap.min.css.map" rel="stylesheet">
+  	
+ 	Copy the fonts folder with css folder too.
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.css.map" >
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    
+    <!-- Socail Login styling end -->
+
+
+ <!-- Firebase auth -->
+		  <script src="lib/firebase/firebase.js"></script>
+	  	  <script src="lib/angular-fire/angularfire.min.js"></script>
+  	  
+  	  <!-- Social login button styling -->
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+		  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  
+		  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  
+	 <!-- Firechat -->
+		<link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
+		<script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script> 
+   
+   
+2. Inject ‘firebase’ in app.js angular module.
+3. Add Chat controller.
+4. Add chat.html
+5. Two files: bootstrap-social.css and chatbubbles2.svg
+6. Add chat state in app.js
+7. Install this plugin in project
+cordova plugin add org.apache.cordova.inappbrowser
+8.  Change otherwise state  to following:∂
+9. // this is due to the chatUI widget with hyperlinks, so if anytime other than the first login a link is clicked go to chat			
+10. $urlRouterProvider.otherwise(function($injector, $location)
+11. 				   var state = $injector.get('$state');
+12. 				   if(state.current.name == '') {
+13. 					   state.go('app.playlists');
+14. 				   }
+15. 				   else {
+16. 					   state.go('app.chat');
+17. 				   }
+18. 				   return $location.path();
+19. 				});
+
+---------------------------
+To add Chat module: End 
+---------------------------

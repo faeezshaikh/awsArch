@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [ 'socialShareModule'])
+angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 
 .controller('AppCtrl', function($scope, $stateParams, $state, $http, helperService, $ionicModal, localStorageService, awsService, $rootScope, topicMap, shareService) {
 
@@ -275,7 +275,4 @@ angular.module('starter.controllers', [ 'socialShareModule'])
 		shareService.shareViaEmail();
 	}
 
-})
-
-
-;
+});
