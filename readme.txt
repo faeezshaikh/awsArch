@@ -58,6 +58,10 @@ Remove from Info.plist file
     <string>icon.png</string>
 
 
+Twitter app
+apps.twitter.com
+thecloudinstitute1@gmail.com/Posidon745
+
 ---------------------------
 To add Chat module: Start 
 ---------------------------
