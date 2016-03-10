@@ -23,6 +23,10 @@ ANDROID SCREENSHOTS
 
 (Optional)
  Start Android Virtual Device from AVD manager (either standalone or from android studio)
+Android Studio --> Android device monitor
+
+On Mac:
+/Users/faeezshaikh/Library/Android/sdk/platform-tools/adb install
 
 2. Install the apk in the emulator using this command:
 ~/Android/~platform-tools/adb install yourfile.apk
