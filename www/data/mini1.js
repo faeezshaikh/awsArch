@@ -199,6 +199,53 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "Deploy a Windows Bastion host with an Elastic IP address in the public subnet and allow SSH access to the bastion from anywhere.", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "Deploy a Windows Bastion host with an Elastic IP address in the private subnet, and restrict RDP access to the bastion from only the corporate public IP addresses.", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "Deploy a Windows Bastion host with an auto-assigned Public IP address in the public subnet, and allow RDP access to the bastion from only the corporate public IP addresses.", "IsAnswer": true }]
+    }, 
+    {
+        "Id": 21,
+        "Name": "Select the most correct answer regarding the persistence of the Amazon Instance Store", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "The data on an instance store volume persists only during the life of the associated Amazon EC2 instance", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "The data on an instance store volume is lost when the security group rule of the associated instance is changed", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The data on an instance store volume persists even after associated Amazon EC2 instance is deleted", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "The data on an instance store volume persists even after associated Amazon EC2 instance is terminated", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 22,
+        "Name": "A web startup provides language translation services. Users can record sound files in .wav format and upload to their site. The .wav files are internally uploaded to S3 buckets by the website. A fleet of spot EC2 instances runs an app that does the actual processing of the .wav files and then converts the sound to text, detects the language, dialect and intelligently translates into the desired language of the user's choosing. The startup offers a freemium model. Users can try the service free of charge for the first seven days and then must sign up for the paid service. As an architect for this startup you want to make sure that .wav files submitted by your paying customers must be transformed with the highest priority, before the requests submitted by the free customers. How will you implement such a system?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use a DynamoDB table with an attribute defining the priority level. Transformation instances will scan the table for tasks, sorting the results by priority level.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use Route 53 latency based-routing to send high priority tasks to the closest transformation instances.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use two SQS queues, one for high priority messages, the other for default priority. Transformation instances first poll the high priority queue; if there is no message, they poll the default priority queue.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Use a single SQS queue. Each message contains the priority level. Transformation instances poll high-priority messages first.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 23,
+        "Name": "What is one key difference between an Amazon EBS-backed and an instance-store backed instance?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Instance-store backed instances can be stopped and restarted", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Auto scaling requires using Amazon EBS-backed instances", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Amazon EBS-backed instances can be stopped and restarted", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Virtual Private Cloud requires EBS backed instances", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 24,
+        "Name": "You would like to create a mirror image of your production environment in another region for disaster recovery purposes. Which of the following AWS resources do not need to be recreated in the second region? (Choose 2 answers)", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Route 53 Record Sets", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "IAM Roles", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Elastic IP Addresses (EIP)", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "EC2 Key Pairs", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Launch configurations", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Security Groups", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 25,
+        "Name": "Your company runs a customer facing event registration site. This site is built with a 3-tier architecture with web and application tier servers and a MySQL database. The application requires 6 web tier servers and 6 application tier servers for normal operation, but can run on a minimum of 65% server capacity and a single MySQL database. When deploying this application in a region with three availability zones (AZs) which architecture provides high availability?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer), and an application tier deployed across 2 AZs with 3 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB. and one RDS (Relational Database Service) instance deployed with read replicas in the other AZ.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB and one RDS (Relational Database Service) Instance deployed with read replicas in the two other AZs.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 2 AZs with 3 EC2 instances m each AZ inside an Auto Scaling Group behind an ELS and a Multi-AZ RDS (Relational Database Service) deployment.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ Inside an Auto Scaling Group behind an ELB (elastic load balancer). And an application tier deployed across 3 AZs with 2 EC2 instances In each AZ inside an Auto Scaling Group behind an ELB. And a Multi-AZ RDS.", "IsAnswer": false }]
     }
      ]
 }

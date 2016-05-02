@@ -50,7 +50,7 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 					$scope.timer = 4800;   // 80 minutes for cert exam
 				}
 				if (examTopic == 400) {
-					$scope.timer = 1500;  // 15 minutes for mini exams
+					$scope.timer = 1800;  // 30 minutes for warmup exams
 				}
 
 			} else {
