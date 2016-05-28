@@ -1,11 +1,12 @@
 Publishing:
 http://ionicframework.com/docs/guide/publishing.html
 
-cordova build --release android
+sudo cordova build --release android
 
 (Already generated - do not lose - If Key not already present)
 keytool -genkey -v -keystore  awsArch-key.keystore -alias awsArch- -keyalg RSA -keysize 2048 -validity 100000
 
+cp /Users/faeezshaikh/git/homeautomation/platforms/android/build/outputs/apk/android-release-unsigned.apk .
 
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore awsArch-key.keystore android-release-unsigned.apk awsArch-
 

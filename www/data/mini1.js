@@ -246,6 +246,52 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB and one RDS (Relational Database Service) Instance deployed with read replicas in the two other AZs.", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 2 AZs with 3 EC2 instances m each AZ inside an Auto Scaling Group behind an ELS and a Multi-AZ RDS (Relational Database Service) deployment.", "IsAnswer": true },
             { "Id": 1058, "QuestionId": 1010, "Name": "A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ Inside an Auto Scaling Group behind an ELB (elastic load balancer). And an application tier deployed across 3 AZs with 2 EC2 instances In each AZ inside an Auto Scaling Group behind an ELB. And a Multi-AZ RDS.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 26,
+        "Name": "A radio news broadcasting network recently launched a website that allows its subscribers to report on major news events around the world using their mobile devices. Part of requirements for this new website is that subscribers should be able to upload pictures and media files from their cell phones to the website. In line with the nature of business its very reasonable to expect seasonal bursts in traffic if and when major events happen around the globe. The website will use Amazon Web Service’s S3 buckets to store the picture and media content. The desire is to keep the storage costs to a minimum and the business has given a nod to the fact that durability could be sacrificed (within reason) as long as costs are kept to a minimum. In other words its OK if some S3 objects are lost. Given these requirements which storage media will you recommend?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "S3 - Infrequently Accessed Storage.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "S3 - Reduced Redundancy Storage (RRS).", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Glacier", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "S3 - Provisioned IOPS.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 27,
+        "Name": "Since you were the first AWS Certified Solutions Architect in your company; your department assigned you the responsibility to create their first AWS account. You have access to the root account to log into the console and manage the company’s AWS resources. Over time interest in AWS across your company has exploded and now there are several co-workers who would like to try their hands at using AWS. You were the only one so far with access to the root account. You now need to share the company’s AWS resources with a larger staff. What should you do so that everyone can safely access the AWS resources? (select 2)", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Create an additional AWS root account for each new user.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Create individual user accounts with minimum necessary rights and tell the staff to log in to the console using the credentials provided.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Create a customized sign in link such as yourcompany.signin.aws.amazon.com/console for your new users to use to sign in with.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Give your users the root account credentials so that they can also sign in.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 28,
+        "Name": "You supervisor has requested that a new co-worker be granted administrative access to your company’s AWS console. As an admin yourself you have have created the new co-worker a user name, access key ID, secret access key and you have generated a password for her. She is  able to log in to the AWS console, but  cannot do anything else. What should you do next?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Add her to the Administrators group, where your other administrator users belong.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Set up multi-factor authentication for her.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Ensure she is  logging in to the AWS console from your corporate network and not the normal internet.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Tell her to log out and try logging back in again.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 29,
+        "Name": "A company headquartered in Dubai, UAE recently decided to shut down their local data center and move all the legacy hardware to AWS. You are hired as their Solution Architect and your first order of business is to figure out user accounts in IAM. The company has small offices/ staff in India, Singapore and Sydney. You need to setup accounts for users in those offices as well. Which of the following is true?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "You will then need to configure Users and Policy Documents for each region respectively.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "You will need to configure Users and Policy Documents only once, as these are applied globally.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "You will need to configure your users regionally, however your policy documents are global.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "You will need to configure your policy documents regionally, however your users are global.", "IsAnswer": false }]
+    }, 
+    {
+        "Id": 30,
+        "Name": "Your company’s website is hosted on EC2 instances that are part of an Auto Scaling Group. The app talks to database hosted on a Large MySql instance. A seasonal burst of traffic is expected and on running a load test its found that the database struggles to keep up with the reads that are generated by high traffic. What will you recommend to successfully scale the environment to achieve high speed? (select 2)", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Migrate the database to a MySQL Multi-AZ database", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Create a read replica of the MySQL database", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Migrate the database from MySQL to Aurora for better performance", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Place the RDS instances behind a secondary Auto Scaling Group", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Implement Elasticache to cache the most common queries and configure Magento to use this caching service", "IsAnswer": true }]
     }
      ]
 }
