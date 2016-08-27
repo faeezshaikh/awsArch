@@ -36,9 +36,8 @@ angular.module('starter', ['ionic', 'starter.controllers','timer','LocalStorageM
     11 : 'data/dynamoDb.js',
     12 : 'data/cf.js',
     100 : 'data/practice1.js',
-    200 : 'data/practice2.js',
-    300 : 'data/exam.js',
-    400: 'data/mini1.js'
+    200 : 'data/exam1.js',
+    300 : 'data/exam2.js'
 })
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

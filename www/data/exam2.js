@@ -1,6 +1,6 @@
 {
     "quiz": {
-        "Id": 15,
+        "Id": 300,
         "name": "Certification Exam",
         "logo" : "data/img/certified.png"
     },
@@ -30,7 +30,10 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "Mount the EBS volume in to S3 and then encrypt the bucket using a bucket policy.", "IsAnswer": false},
             { "Id": 1056, "QuestionId": 1010, "Name": "Configure encryption using X.509 certificates", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "Configure encryption using the appropriate Operating Systems file system", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "Configure encryption when creating the EBS volume", "IsAnswer": true }]
+            { "Id": 1058, "QuestionId": 1010, "Name": "Configure encryption when creating the EBS volume", "IsAnswer": true }],
+            
+            "explanation" : "Its important to remember that encryption for EBS volumes should be configured at the time of creating the EBS volume.When you create an encrypted EBS volume and attach it to a supported instance type, the following types of data are encrypted: 1) Data at rest inside the volume. 2) All data moving between the volume and the instance. 3) All snapshots created from the volume",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html"
     },
      {
         "Id": 4,
@@ -48,7 +51,10 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "The decider is a systems administrator who must decided on how an SWF is designed.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "The decider is a person in the Amazon warehouse who must decide on what products to deliver.", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "The decider is a program that controls the coordination of tasks, i.e. their ordering, concurrency, and scheduling according to the application logic.", "IsAnswer": true },
-            { "Id": 1058, "QuestionId": 1010, "Name": "The decider is an EC2 instance which monitors SWF and decides whether to delete a message in SWF or not.", "IsAnswer": false }]
+            { "Id": 1058, "QuestionId": 1010, "Name": "The decider is an EC2 instance which monitors SWF and decides whether to delete a message in SWF or not.", "IsAnswer": false }],
+            
+            "explanation" : "A decider is an implementation of a workflow's coordination logic. Deciders control the flow of activity tasks in a workflow execution. ",
+            "ref":"http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html#swf-dev-actors-deciders"
 
     },
     {
@@ -94,7 +100,10 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "The template for spinning up enterprise architecture will cost more since enterprise apps typically demand a large & complex framework.", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "The template for spinning up gaming architecture will cost more since gaming apps require intensive CPU cycles.", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "The cost of both the templates will be the same.", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "CloudFormation is free but you are only charged for the underlying resources it builds.", "IsAnswer": true }]
+            { "Id": 1058, "QuestionId": 1010, "Name": "CloudFormation is free but you are only charged for the underlying resources it builds.", "IsAnswer": true }],
+            
+            "explanation" : "There is no additional charge for AWS CloudFormation. You only pay for the AWS resources that are created (e.g., Amazon EC2 instances, Elastic Load Balancing load balancers etc.)",
+            "ref":"https://aws.amazon.com/cloudformation/faqs/"
         
     },
      {
@@ -121,7 +130,10 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Data persists on the storage", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Data is backed to S3", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "All data is lost.", "IsAnswer": true }]
+            { "Id": 1057, "QuestionId": 1010, "Name": "All data is lost.", "IsAnswer": true }],
+            
+            "explanation" : "The data in an instance store persists only during the lifetime of its associated instance.",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html"
         
     },
      {
@@ -131,17 +143,23 @@
            { "Id": 1055, "QuestionId": 1010, "Name": "Tags", "IsAnswer": true },
             { "Id": 1056, "QuestionId": 1010, "Name": "Labels", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "Folders", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "Categories", "IsAnswer": false }]
+            { "Id": 1058, "QuestionId": 1010, "Name": "Categories", "IsAnswer": false }],
+            
+            "explanation" : "To help you manage your instances, images, and other Amazon EC2 resources, you can assign your own metadata to each resource in the form of tags.",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html"
         
     },
      {
         "Id": 15,
-       "Name": "What is the default region in AWS?",  
+       "Name": "What is the default region in AWS SDK for Java?",  
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "us-west-2", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "us-east-1", "IsAnswer": true },
             { "Id": 1057, "QuestionId": 1010, "Name": "us-northeast-1", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "us-southwest-1", "IsAnswer": false }]
+            { "Id": 1057, "QuestionId": 1010, "Name": "us-southwest-1", "IsAnswer": false }],
+            
+            "explanation" : "The AWS SDK for Java uses us-east-1 as the default region if you do not specify a region in your code. However, the AWS Management Console uses us-west-2 as its default. Therefore, when using the AWS Management Console in conjunction with your development, be sure to specify the same region in both your code and the console.",
+            "ref":"http://docs.aws.amazon.com/AWSSdkDocsJava/latest/DeveloperGuide/java-dg-region-selection.html"
         
     },
      {
@@ -151,7 +169,10 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "create-snapshot", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "ec2-snapshot", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "ec2-create-snapshot", "IsAnswer": true },
-            { "Id": 1058, "QuestionId": 1010, "Name": "ec2 create ss", "IsAnswer": false }]
+            { "Id": 1058, "QuestionId": 1010, "Name": "ec2 create ss", "IsAnswer": false }],
+            
+            "explanation" : "ec2-create-snapshot command creates a snapshot of an Amazon EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of instance store volumes, and to save data before shutting down an instance.",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateSnapshot.html"
         
     },
      {
@@ -208,18 +229,24 @@
        "Name": "Currently there are ______ regions in AWS.",  
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "20", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "11", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "12", "IsAnswer": true },
             { "Id": 1057, "QuestionId": 1010, "Name": "40", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "30", "IsAnswer": false}]
+            { "Id": 1058, "QuestionId": 1010, "Name": "30", "IsAnswer": false}],
+            
+            "explanation" : "The AWS Cloud operates 33 Availability Zones within 12 geographic Regions around the world, with 11 more Availability Zones and 5 more Regions coming online throughout the next year.",
+            "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
         
     },
      {
         "Id": 23,
-       "Name": "There are __________ edge locations:", 
+       "Name": "The AWS Cloud operates ________ Availability Zones", 
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "45", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "35", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "52", "IsAnswer": true }]
+            { "Id": 1056, "QuestionId": 1010, "Name": "33", "IsAnswer": true }],
+            
+            "explanation" : "The AWS Cloud operates 33 Availability Zones within 12 geographic Regions around the world, with 11 more Availability Zones and 5 more Regions coming online throughout the next year.",
+            "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
         
     },
      {
@@ -597,16 +624,6 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "Direct access to S3 URLs can be removed therefore allowing access only through CloudFront URLs", "IsAnswer": true},
             { "Id": 1057, "QuestionId": 1010, "Name": "Mark the S3 bucket private and allow access to CloudFront by means of Roles", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "Mark the S3 bucket private and and create an Origin Access Identity to access the objects", "IsAnswer": true}]
-
-    },
-     {
-        "Id": 61,
-       "Name": "You have written a CloudFormation template that creates 1 elastic load balancer fronting 2 EC2 instances. Which section of the template should you edit so that the DNS of the load balancer is returned upon creation of the stack.", 
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "Resources", "IsAnswer": false},
-            { "Id": 1056, "QuestionId": 1010, "Name": "Parameters", "IsAnswer": false},
-            { "Id": 1057, "QuestionId": 1010, "Name": "Outputs", "IsAnswer": true},
-            { "Id": 1058, "QuestionId": 1010, "Name": "Mappings", "IsAnswer": false}]
 
     }
     ]

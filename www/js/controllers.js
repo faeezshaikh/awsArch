@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 
-.controller('AppCtrl', function($scope, $stateParams, $state, $http, helperService, $ionicModal, localStorageService, awsService, $rootScope, topicMap, shareService) {
+.controller('AppCtrl', function($scope, $stateParams, $state, $http, helperService, $ionicModal, localStorageService, awsService, $rootScope, topicMap, shareService,$window,$ionicScrollDelegate) {
 
 	var warned = false;
 	var practiceExam = false;
@@ -23,6 +23,29 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 		awsService.setTimerSettings(val);
 	}
 
+	$scope.showExplanation = function(expl,reference,topicId) {
+		$scope.explantion = expl;
+		$scope.ref = "'" + reference + "'";
+		$scope.explanationTopic = topicId;
+		$ionicModal.fromTemplateUrl('templates/explanationModal.html', {
+			scope : $scope
+		}).then(function(modal) {
+			$scope.explModal = modal;
+			$scope.explModal.show();
+		});
+	}
+	$scope.closeExplanation = function(topicId) {
+		$scope.explModal.hide();
+		console.log('closing');
+
+		// After opening a new window from the explanation modal, when you hit 'Close' the location changes to the chat home screen, so forcing it to go back to the topics results page
+		$window.location.href = "#/app/topics/" + topicId;
+		
+	}
+	$scope.openLink = function(link) {
+		window.open(link, '_system', 'location=yes'); 
+		return false;
+	}
 	$scope.loadQuiz = function(examTopic) {
 
 		$scope.questions = [];
@@ -46,7 +69,7 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 				$scope.timer = 2400;
 				$scope.showTimer = true;
 
-				if (examTopic == 300) {
+				if (examTopic == 300 || examTopic == 200 ) {
 					$scope.timer = 4800;   // 80 minutes for cert exam
 				}
 				if (examTopic == 400) {
@@ -55,12 +78,12 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 
 			} else {
 				// Show the modal if not warned.
-				if (examTopic == 300) {
+				if (examTopic == 200  || examTopic == 300) {
 					$scope.bigExam = 'big'; // the Warning modal differs for practice exam vs certification exam in title
 				}
-				if (examTopic == 400) {
-					$scope.bigExam = 'mini'; // the Warning modal differs for practice exam vs certification exam in title
-				}
+//				if (examTopic == 400) {
+//					$scope.bigExam = 'mini'; // the Warning modal differs for practice exam vs certification exam in title
+//				}
 
 				$ionicModal.fromTemplateUrl('templates/warningModal.html', {
 					scope : $scope
@@ -134,6 +157,8 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 			$scope.currentPage = index;
 			$scope.mode.value = 'quiz';
 		}
+			console.log("scrolling");
+		$ionicScrollDelegate.$getByHandle('mainScroll').scrollTop(true);
 	}
 
 	$scope.onSelect = function(question, option) {
@@ -274,5 +299,6 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 	$scope.shareEmail = function() {
 		shareService.shareViaEmail();
 	}
+
 
 });

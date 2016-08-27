@@ -1,7 +1,7 @@
 {
     "quiz": {
-        "Id": 14,
-        "name": "Practice Exam 2",
+        "Id": 100,
+        "name": "Practice Exam 1",
         "logo" : "data/img/exam.jpg"
     },
     "questions": [{
@@ -293,6 +293,16 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "DynamoDB restricts item access during reads", "IsAnswer": false },
             { "Id": 1059, "QuestionId": 1010, "Name": "DynamoDB restricts item access during writes", "IsAnswer": false }]
         
+    },
+     {
+        "Id": 31,
+       "Name": "You have written a CloudFormation template that creates 1 elastic load balancer fronting 2 EC2 instances. Which section of the template should you edit so that the DNS of the load balancer is returned upon creation of the stack.", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Resources", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Parameters", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Outputs", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Mappings", "IsAnswer": false}]
+
     }]
 }
 

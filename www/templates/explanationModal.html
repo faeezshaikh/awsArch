@@ -1,0 +1,39 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-balanced">
+
+  </ion-header-bar>
+  <ion-content>
+<div class="list card">
+
+  <div class="item item-avatar">
+     <img height="150" width="150" ng-src="data/img/exam.jpg" >
+    <h2>AWS Solutions Architect</h2>
+    
+    <p>Explanation of the answer.</p>
+    
+  </div>
+
+  <div class="item item-body">
+	<stong>Explanation:</stong> {{explantion}}
+	<p>
+    Reference : 
+      <a class="item" href="#" ng-click="openLink({{ref}})">
+                Tap here to read details in AWS docs
+            </a>
+  </div>
+  <div class="center">
+
+
+<button class="button button-balanced" ng-click="closeExplanation(explanationTopic)">
+ Close  
+ 
+ 
+</button>
+</div>
+
+
+</div>
+
+
+  </ion-content>
+</ion-modal-view>

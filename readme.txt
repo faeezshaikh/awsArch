@@ -127,3 +127,15 @@ cordova plugin add org.apache.cordova.inappbrowser
 ---------------------------
 To add Chat module: End 
 ---------------------------
+
+
+
+
+Pure CSS Circular Percentage Bar
+
+http://www.cssscript.com/pure-css-circular-percentage-bar/
+
+
+Circular Timer
+http://codepen.io/HugoGiraudel/pen/BHEwo
+
