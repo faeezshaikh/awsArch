@@ -13,16 +13,11 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 		$scope.showTimer = false;
 	}
 
-	/*
-	
-	 5. Ebook page
-	 9. ebook site
-	 */
-
 	$scope.toggleTimer = function(val) {
 		awsService.setTimerSettings(val);
 	}
 
+	////////// Explanation Feature Starts   /////////
 	$scope.showExplanation = function(expl,reference,topicId) {
 		$scope.explantion = expl;
 		$scope.ref = "'" + reference + "'";
@@ -38,7 +33,9 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 		$scope.explModal.hide();
 		console.log('closing');
 
-		// After opening a new window from the explanation modal, when you hit 'Close' the location changes to the chat home screen, so forcing it to go back to the topics results page
+			/*  After opening a new window from the explanation modal, 
+		 			when you hit 'Close' the location changes to the chat home screen, 
+		 			so forcing it to go back to the topics results page */
 		$window.location.href = "#/app/topics/" + topicId;
 		
 	}
@@ -46,7 +43,11 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 		window.open(link, '_system', 'location=yes'); 
 		return false;
 	}
-	$scope.loadQuiz = function(examTopic) {
+		///////// Explanation Feature Ends  //////////
+
+
+	function loadQuiz(examTopic) {
+		
 
 		$scope.questions = [];
 		$scope.timer = 900;
@@ -56,7 +57,7 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 		file = topicMap[examTopic];
 
 		if (examTopic == 100 || examTopic == 200 || examTopic == 300 || examTopic == 400 || examTopic == 500) {
-			// If its one of the mock exams
+			// If its one of the mock exam
 			practiceExam = true;
 
 			if ($scope.showTimer) {
@@ -91,8 +92,6 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 					$scope.warningModal = modal;
 					$scope.warningModal.show();
 				});
-				
-		
 			}
 
 		}
@@ -119,7 +118,7 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 	}
 
 	if (examTopic) {
-		$scope.loadQuiz(examTopic);
+			loadQuiz(examTopic);
 	}
 
 	$scope.mode = {
@@ -276,7 +275,7 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 	$scope.startPracticeExam = function() {
 		$scope.warningModal.hide();
 		warned = true;
-		$scope.loadQuiz(examTopic);
+		loadQuiz(examTopic);
 	}
 
 	function calculateAndUpdateScore() {
