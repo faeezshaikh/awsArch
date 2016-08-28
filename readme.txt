@@ -131,11 +131,6 @@ To add Chat module: End
 
 
 
-Pure CSS Circular Percentage Bar
-
-http://www.cssscript.com/pure-css-circular-percentage-bar/
-
-
-Circular Timer
-http://codepen.io/HugoGiraudel/pen/BHEwo
+Jquery Circle Progress from here:
+http://ignitersworld.com/lab/radialIndicator.html
 

@@ -5,18 +5,15 @@
 
         <div id="quiz">
             <div class="center">
-
                 <img height="80" width="80" ng-src="{{quiz.logo}}" />
                 <h1>{{quiz.name}}</h1>
             </div>
 
             <div class="center " ng-if="showTimer">
                 <button class="button button-outline button-balanced center">
-
-            <i class="ion-android-alarm-clock larger "></i> &nbsp;
-            <timer countdown="timer" max-time-unit="'minute'" interval="1000" finish-callback="timerElapsed()">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
-
-        </button>
+                    <i class="ion-android-alarm-clock larger "></i> &nbsp;
+                    <timer countdown="timer" max-time-unit="'minute'" interval="1000" finish-callback="timerElapsed()">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+                </button>
             </div>
 
             <hr />
@@ -73,7 +70,8 @@
         </div>
 
         <div class="result" ng-show="mode.value=='result'">
-
+            <p></p>
+            <div class="center" id="circle"></div>
             <div class="list card">
 
                 <div class="item item-avatar">
@@ -118,6 +116,7 @@
 
                 </div>
             </div>
+            <p></p>
 
 
 

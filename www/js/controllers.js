@@ -190,8 +190,27 @@ angular.module('starter.controllers', [ 'socialShareModule','firebase'])
 
 			// Otherwise we dont show warning and directly calculate score.
 			calculateAndUpdateScore();
+			drawCirclePercentage();
 		}
+		$ionicScrollDelegate.$getByHandle('mainScroll').scrollTop(true);
+	}
 
+	function drawCirclePercentage() {
+			$('#circle').radialIndicator({
+				barColor: {
+					0: '#ff1a33',
+					33: '#f64d94',
+					66: '#66ccff',
+					100: '#66ff66'
+				},
+        barWidth: 10,
+        initValue: 0,
+        roundCorner: true,
+        percentage: true
+			});
+
+			var radialObj = $('#circle').data('radialIndicator');
+			radialObj.animate(60);
 	}
 
 	$scope.isAnswered = function(index) {
