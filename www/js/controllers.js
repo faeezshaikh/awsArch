@@ -254,7 +254,7 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
 
 			awsService.updateScoreForTopics(examTopic, $scope.score);
 			$scope.mode.value = 'result';
-			drawCirclePercentage();
+			drawCirclePercentage($scope.score);
 		}
 
 		$scope.shareFb = function () {
@@ -304,7 +304,7 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
 
 
 		////// Draw Circular percentage bar //////
-		function drawCirclePercentage() {
+		function drawCirclePercentage(score) {
 			$('#circle').radialIndicator({
 				barColor: {
 					0: '#ff1a33',
@@ -318,8 +318,8 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
         percentage: true
 			});
 
-			var radialObj = $('#circle').data('radialIndicator');
-			radialObj.animate(60);
+			// var radialObj = $('#circle').data('radialIndicator');
+			// radialObj.animate(score);
 		}
 		////// Draw Circular percentage bar //////
 

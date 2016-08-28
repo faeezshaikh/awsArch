@@ -303,6 +303,47 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "Outputs", "IsAnswer": true},
             { "Id": 1058, "QuestionId": 1010, "Name": "Mappings", "IsAnswer": false}]
 
+    },
+     {
+        "Id": 32,
+       "Name": "You have just added a linux based bastion host to the default VPC and have verified that it was assigned a public IP address.  You want to permit ssh access to this host only from your corporate location at ip address 172.21.8.19.  Which of the following will have this affect?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Add an inbound rule to the default security group for port 22, UDP, with source 172.21.8.19/32", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Add an inbound rule to the default security group for port 22, TCP, with source 172.21.8.19/32", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Add an inbound rule to the nACL on the bastion's subnet, port 22, UDP, with source 172.21.8.19/32", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Add an inbound rule to the nACL on the bastion's subnet, port 22, TCP, with source 172.21.8.19/0", "IsAnswer": false}]
+
+    },
+     {
+        "Id": 33,
+       "Name": "Amazon Glacier is designed for? (Choose 2 answers)", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Frequently accessed data", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Active database storage", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Infrequently accessed data", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Cached session data", "IsAnswer": false},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Data archives", "IsAnswer": true}]
+
+    },
+     {
+        "Id": 34,
+       "Name": "You have a business-critical two-tier web app currently deployed in two Availability Zones in a single region, using Elastic Load Balancing and Auto Scaling. The app depends on synchronous replication (very low latency connectivity) at the database layer. The application needs to remain fully available even if one application Availability Zone goes off-line, and Auto Scaling cannot launch new instances in the remaining Availability Zones. How can the current architecture be enhanced to ensure this?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 33 percent peak load per zone.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 50 percent peak load per zone.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 50 percent peak load per Region.", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 100 percent peak load per region.", "IsAnswer": false}]
+
+    },
+     {
+        "Id": 35,
+       "Name": "You have been tasked with creating a VPC network topology for your company. The VPC network must support both Internet-facing applications and internally-facing applications accessed only over VPN. Both Internet-facing and internally-facing applications must be able to leverage at least three AZs for high availability.  At a minimum, how many subnets must you create within your VPC to accommodate these requirements?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "2", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "3", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "4", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "6", "IsAnswer": true}]
+
     }]
 }
 
