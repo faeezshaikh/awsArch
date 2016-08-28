@@ -48,15 +48,6 @@ angular.module('starter', ['ionic', 'starter.controllers','timer','LocalStorageM
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.ebook', {
-      url: '/ebook',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/ebook.html'
-        }
-      }
-    })
   .state('app.settings', {
       url: '/settings',
       views: {
@@ -86,22 +77,6 @@ angular.module('starter', ['ionic', 'starter.controllers','timer','LocalStorageM
 				views : {
 					'menuContent' : {
 						templateUrl : 'templates/chat.html'
-					}
-				}
-			})
-	 .state('app.cards', {
-				url : '/cards',
-				views : {
-					'menuContent' : {
-						templateUrl : 'templates/cards.html'
-					}
-				}
-			})
-			 .state('app.fcards', {
-				url : '/fcards',
-				views : {
-					'menuContent' : {
-						templateUrl : 'templates/flashcards.html'
 					}
 				}
 			})
