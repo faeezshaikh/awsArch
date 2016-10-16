@@ -94,5 +94,13 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "5", "IsAnswer": true },
             { "Id": 1058, "QuestionId": 1010, "Name": "10", "IsAnswer": false }]
         
+    },
+    {
+        "Id": 1020,
+        "Name": "If you make an AMI public, this AMI is immediately available across all regions, by default.", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "False", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "True", "IsAnswer": false }]
+        
     }]
 }

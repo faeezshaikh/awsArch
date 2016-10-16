@@ -98,6 +98,16 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "Internet Gateways", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "Route Tables", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "Network ACLS", "IsAnswer": true }]
+    },
+    {
+        "Id": 11,
+        "Name": "As an  AWS Certified Solutions Architect you recommend a custom AWS VPC for a company that wants to migrate their existing infrastructure to the cloud. The company will need a public subnet for their webservers and a private subnet to place their databases in. They also require that the webservers and DB servers be highly available and that there is a minimum of 2 webservers and 2 database servers each. How many subnets should you recommend at a minimum to maintain high availability?",
+        
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "8", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "6", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "4", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "5", "IsAnswer": false }]
     }
      ]
 }

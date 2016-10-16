@@ -96,5 +96,15 @@
            { "Id": 1055, "QuestionId": 1010, "Name": "False", "IsAnswer": true },
             { "Id": 1056, "QuestionId": 1010, "Name": "True", "IsAnswer": false }]
         
+    },
+     {
+        "Id": 1020,
+       "Name": "Alpha Inc. has recently migrated their production database to AWS. The company is using CloudWatch for monitoring and SNS to send alerts to their teams through email and text. On a Monday morning Alpha Inc's Lead Administrator receives a text alert saying that the primary RDS instance has gone down. They have multi-az enabled on this instance. What should the Lead Admin do to ensure the failover happens quickly?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Take a snapshot of the secondary instance and then create a new instance using this snapshot. Then update the connection string to point to the new instance", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Nothing, since multi-az is enabled, the connection string points to the database endpoint and Amazon will automatically update this endpoint to point to the secondary instance.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "SSH in to the server and update the connection strings so that the application will communicate to the secondary instance rather than the failed primary instance.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Update the DNS to point to the secondary instance's new IP address, forcing the applications to fail over to the secondary instance.", "IsAnswer": false}]
+
     }]
 }

@@ -344,6 +344,16 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "4", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "6", "IsAnswer": true}]
 
+    },
+     {
+        "Id": 36,
+       "Name": "For which of the following AWS services will you be billed or charged?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "AWS Autoscaling", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "AWS Elastic Beanstalk", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "AWS Elastic Load Balancers", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Cloud Formation", "IsAnswer": false}]
+
     }]
 }
 
