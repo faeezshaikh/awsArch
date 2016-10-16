@@ -45,6 +45,9 @@ IOS SCREENSHOTS
 3. Take screenshots from emulator
 4. Use launchkit.io for appstore images	
 
+For iPad pro screenshots
+5. https://www.storeshots.net/apps/edit/2187
+
 
 ----
 TIPS
