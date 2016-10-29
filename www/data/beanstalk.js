@@ -45,21 +45,22 @@
     },
     {
         "Id": 5,
-        "Name": "Up to how many applications can you run with AWS Elastic Beanstalk?", 
+        "Name": "What type of AWS ElasticBeanstalk environment tier provisions resources to support a web application that handles background processing tasks?", 
         
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "1", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "25", "IsAnswer": true },
-            { "Id": 1057, "QuestionId": 1010, "Name": "100", "IsAnswer": false}]
+            { "Id": 1055, "QuestionId": 1010, "Name": "Web server environment tier", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Worker environment tier", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Database environment tier", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Batch environment tier", "IsAnswer": false}]
     },
     {
         "Id": 6,
-        "Name": "How many application versions can you run in ElasticBeanstalk?", 
+        "Name": "Your company wants to make an application you made using ElasticBeanstalk to be private. How can you do that?", 
         
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "200", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "20", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "500", "IsAnswer": true }]
+            { "Id": 1055, "QuestionId": 1010, "Name": "By default, applications in ElasticBeanstalk are all private.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "By default, applications in ElasticBeanstalk are public and you cannot make them private.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "By default, applications in ElasticBeanstalk are public and you can use Amazon VPC to provision a private, isolated section of your application in a virtual network that you define. ", "IsAnswer": true }]
         
     },
     {
