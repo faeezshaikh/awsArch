@@ -229,11 +229,11 @@
        "Name": "Currently there are ______ regions in AWS.",  
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "20", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "12", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "14", "IsAnswer": true },
             { "Id": 1057, "QuestionId": 1010, "Name": "40", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "30", "IsAnswer": false}],
             
-            "explanation" : "The AWS Cloud operates 33 Availability Zones within 12 geographic Regions around the world, with 11 more Availability Zones and 5 more Regions coming online throughout the next year.",
+            "explanation" : "The AWS Cloud operates 38 Availability Zones within 14 geographic Regions around the world, with nine more Availability Zones and four more Regions coming online throughout the next year.",
             "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
         
     },
@@ -243,9 +243,9 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "45", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "35", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "33", "IsAnswer": true }],
+            { "Id": 1056, "QuestionId": 1010, "Name": "38", "IsAnswer": true }],
             
-            "explanation" : "The AWS Cloud operates 33 Availability Zones within 12 geographic Regions around the world, with 11 more Availability Zones and 5 more Regions coming online throughout the next year.",
+            "explanation" : "The AWS Cloud operates 38 Availability Zones within 14 geographic Regions around the world, with nine more Availability Zones and four more Regions coming online throughout the next year.",
             "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
         
     },

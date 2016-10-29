@@ -331,7 +331,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 33 percent peak load per zone.", "IsAnswer": false},
             { "Id": 1056, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 50 percent peak load per zone.", "IsAnswer": true},
-            { "Id": 1057, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 50 percent peak load per Region.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 50 percent peak load per Region.", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 100 percent peak load per region.", "IsAnswer": false}]
 
     },
@@ -353,6 +353,30 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "AWS Elastic Beanstalk", "IsAnswer": false},
             { "Id": 1057, "QuestionId": 1010, "Name": "AWS Elastic Load Balancers", "IsAnswer": true},
             { "Id": 1058, "QuestionId": 1010, "Name": "Cloud Formation", "IsAnswer": false}]
+
+    },
+     {
+        "Id": 37,
+       "Name": "You have set up and Autoscaling group with a maximum capacity of 50 AWS EC2 instances in us-east-1 under a single AWS root account. Under load however the Autoscaling group only spins up 20 EC2 instances. What is the likely cause?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Autoscaling has a hard limit of 20 EC2 instances", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Since you did not specify , Autoscaling group defaults to 20 EC2 instances.", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "The Autoscaling group desired capacity is set to 20, hence it stopped after 20 instances.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "You have exceeded the default Amazon EC2 instance limit of 20 per region", "IsAnswer": true}]
+
+    },
+     {
+        "Id": 38,
+       "Name": "Under which circumstances will AWS EC2 instance store data not be preserved?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "The associated security groups are changed.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "The instance is stopped or rebooted.", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "The instance is rebooted or terminated.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "The instance is stopped or terminated.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "None of the above.", "IsAnswer": false}],
+            
+            "explanation" : "The data in an instance store persists only during the lifetime of its associated instance. If an instance is stopped or terminated then the instance store does not persist. Rebooting the instance does not shut down the instance. If an instance reboots (intentionally or unintentionally) data on the instance store persists. Security groups have nothing to do with the lifetime of an instance and have no effect here.",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html"
 
     }]
 }
