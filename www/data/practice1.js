@@ -332,7 +332,10 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 33 percent peak load per zone.", "IsAnswer": false},
             { "Id": 1056, "QuestionId": 1010, "Name": "Deploy in three Availability Zones, with Auto Scaling minimum set to handle 50 percent peak load per zone.", "IsAnswer": true},
             { "Id": 1057, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 50 percent peak load per Region.", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 100 percent peak load per region.", "IsAnswer": false}]
+            { "Id": 1058, "QuestionId": 1010, "Name": "Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 100 percent peak load per region.", "IsAnswer": false}],
+            
+            "explanation" : "ELB cannot balance load across regions (only across AZs within the same region), so the two options with 'Deploying in two regions' can be eliminiated. If there are currently 3 AZs and if one AZ goes down and autoscaling is not working, then the load should be distributed equally among the remaining 2 AZs. Hence set it to handle a minimum of 50% load per zone. Another way to look at this is if there were 3 AZs with Autoscaling set to handle 33% per zone, then if one AZ goes down then the remaining 2 AZs will handle only 33+33 - 66% of the load. Hence the correct option is Deploy in 3 AZs with autoscaling set to 50% per AZ.",
+            "ref":"https://aws.amazon.com/elasticloadbalancing/"
 
     },
      {
@@ -377,6 +380,99 @@
             
             "explanation" : "The data in an instance store persists only during the lifetime of its associated instance. If an instance is stopped or terminated then the instance store does not persist. Rebooting the instance does not shut down the instance. If an instance reboots (intentionally or unintentionally) data on the instance store persists. Security groups have nothing to do with the lifetime of an instance and have no effect here.",
             "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html"
+
+    },
+     {
+        "Id": 39,
+       "Name": "CyberFlicks Corp. provides Streaming access to videos to authenticated users around the world. Which of the following is the best way to accomplish this?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use AWS S3 (Simple Storage Service) in each region with website hosting enabled", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Store the videos on AWS Elastic Block Storage (EBS) volumes.", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Enable Amazon CloudFront with geolocation and signed URLs", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Run a fleet of EC2 instances to host the videos", "IsAnswer": false}],
+            
+            "explanation" : "CloudFront provides the best user experience by delivering data from a geographically advantageous edge location. Signed URLs allow you to control access to authenticated users.",
+            "ref":"http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html"
+
+    },
+     {
+        "Id": 40,
+       "Name": "For high durability purposes, how is data strored in Amazon S3?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Data is automatically replicated to other regions", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Data is automatically replicated to different Availability Zones within a region.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Data is replicated only if versioning is enabled on the bucket", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Data is automatically backed up on tape and restored if needed", "IsAnswer": false}],
+            
+            "explanation" : "AWS never replicates data between regions unless directed by user. AWS does not use tapes.",
+            "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/crr-what-is-isnot-replicated.html"
+
+    },
+     {
+        "Id": 41,
+       "Name": "S3 is an eventually consistent storage system. For what kinds of operations is it possible to get stale data as a result of eventual consistency?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "GET after PUT of a new object", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "GET after DELETE", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "GET after overwrite PUT (PUT to an existing key)", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "DELETE after GET of new object", "IsAnswer": false}],
+            
+            "explanation" : "S3 provides read-after-write consistency for PUTs to new objects (new key), but eventual consistency for GETs and DELETEs of existing objects (existing key) GET after overwrite PUT changes the existing object so that a subsequent GET may fetch the previous and inconsistent object.",
+            "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html"
+
+    },
+     {
+        "Id": 42,
+       "Name": "In order to create a record of who accessed your S3 data and from where, you need to do which of the following?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Enable Amazon CloudWatch logs.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Enable versioning on the bucket.", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Enable website hosting on the bucket", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Enable server access logs on the bucket", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Create an AWS Identity and Access Management IAM bucket policy", "IsAnswer": false}],
+            
+            "explanation" : "Server access logs provide a record of any access to an object in S3.",
+            "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+
+    },
+     {
+        "Id": 43,
+       "Name": "A financial company has 30TB of trading records that needs to be saved for at least 7 years by law. Any record more than a year old is unlikely to be accessed anytime soon. Which of the following storage plans is the most cost efficient?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Store data on EBS volumes attached to T2.Large instances.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Store data on S3 with lifecycle policies that change the storage class to Glacier after one year and deletet the object after 7 years.", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Store the data on DynamoDB and delete the data older than 7 years.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Store the Data on Amazon Glacier Vault Lock", "IsAnswer": true}],
+            
+            "explanation" : "Server access logs provide a record of any access to an object in S3.",
+            "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+
+    },
+     {
+        "Id": 44,
+       "Name": "What is the primary use case of Amazon Kinesis Firehose?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Ingest huge streams of data and allow custom processing of data in flight.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Ingest huge streams of data and store it to S3, Redshift, or Amazon ElasticSearch Service.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Generate a huge stream of data from a S3 bucket.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Generate a huge stream of data from DynamoDB", "IsAnswer": false}],
+            
+            "explanation" : "The Amazon Kinesis family of services provides functionality to ingest large streams of data. Amazon Kinesis Firehose is specifically designed to ingest a stream and save it  to any of the 3 storage services listed in the question.",
+            "ref":"https://aws.amazon.com/kinesis/firehose/"
+
+    },
+     {
+        "Id": 45,
+       "Name": "A company wants to host its secure web application in AWS. Any connections to or from the web server is considered insecure and require application data protection. What steps should you take to protect data in transit for the application (Choose 2 answers:)", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use BitLocker to encrypt data.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use HTTPs with server certificate authentication.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use AWS IAM roles.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Use SSL/TLS for database connection", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use XML for data transfer from client to server.", "IsAnswer": false}],
+            
+            "explanation" : "To protect data in transit from clients to web apps HTTPs with server certifie authentication should be used. To protect data in transit from web apps to database SSL/TLS for database connections should be used.",
+            "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html"
 
     }]
 }
