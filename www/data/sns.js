@@ -106,6 +106,19 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "Message", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "Topic", "IsAnswer": true }]
         
+    },
+    {
+        "Id": 1020,
+        "Name": "Which of the following cannot subscribe to SNS?",
+        
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "AWS Lambda", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "SWF", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "SQS", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Email", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "HTTPS", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "SMS", "IsAnswer": false }]
+        
     }
      ]
 }

@@ -52,7 +52,7 @@ angular.module('starter')
                 { title: 'VPC', desc:'Subnets, NACLs, Gateways, IPs', id: 6 ,url:'data/img/VPC.png',tagline:'11 questions, 15 minutes'},
                 { title: 'Elastic Beanstalk', desc:'Easy to begin, Impossible to outgrow', id: 7 ,url:'data/img/ElasticBeanstalk.png',tagline:'10 questions, 15 minutes'},
                 { title: 'SQS',desc:'Simpe Queue Service',  id: 8 ,url:'data/img/SQS.png',tagline:'10 questions, 15 minutes'},
-                { title: 'SNS',desc:'Push Notification Service',  id: 9 ,url:'data/img/SNS.png',tagline:'10 questions, 15 minutes'},
+                { title: 'SNS',desc:'Push Notification Service',  id: 9 ,url:'data/img/SNS.png',tagline:'11 questions, 15 minutes'},
                 { title: 'SWF', desc:'Simple Workflow Service', id: 10 ,url:'data/img/SWF.png',tagline:'11 questions, 15 minutes'},
                 { title: 'DynamoDB', desc:'Amazons NoSQL Database', id: 11 ,url:'data/img/DynamoDB.png',tagline:'10 questions, 15 minutes'},
                 { title: 'CloudFormation', desc:'Templates and Stacks', id: 12 ,url:'data/img/CloudFormation.png',tagline:'10 questions, 15 minutes'}

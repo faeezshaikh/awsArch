@@ -474,6 +474,28 @@
             "explanation" : "To protect data in transit from clients to web apps HTTPs with server certifie authentication should be used. To protect data in transit from web apps to database SSL/TLS for database connections should be used.",
             "ref":"http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html"
 
+    },
+     {
+        "Id": 46,
+       "Name": "Which of the following Amazon services is durable key value store?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "AWS Lambda", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "AWS Simple Storage Service (S3)", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "AWS Kinesis", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Kinesis Firehose", "IsAnswer": false},
+            { "Id": 1059, "QuestionId": 1010, "Name": "AWS EBS", "IsAnswer": false}]
+
+    },
+     {
+        "Id": 47,
+       "Name": "You are a AWS Certified Solution Architect who has recently joined a Fortune 500 company that has a requirement to closely monitor all its environments in production in AWS. You recommend using CloudWatch. One week after setting up CloudWatch the team notices that the health of every important metric in the default dashboard is not being captured. You realize you need to design a custom CloudWatch metric for monioring the detailed health of the EC2 instances. Which of the following metrics should be considered while designing a custom CloudWatch metric?", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "CPU Usage", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Memory Usage", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Disk Read Operations", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Network In ", "IsAnswer": false},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Estimated Charges", "IsAnswer": false}]
+
     }]
 }
 
