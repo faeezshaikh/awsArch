@@ -69,11 +69,11 @@
     },
     {
         "Id": 8,
-        "Name": "Which of this is not an option when configuring a VPC using the wizard:", 
+        "Name": "Which of these is not an option when configuring a VPC using the wizard:", 
         
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "VPC with a Single Public Subnet Only", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "VPC with Multiple Prublic Sunets only", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "VPC with Multiple Public Sunets only", "IsAnswer": true},
             { "Id": 1057, "QuestionId": 1010, "Name": "VPC with Public and Private Subnets", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "VPC with Public and Private Subnets and Hardware VPN Access", "IsAnswer": false},
             { "Id": 1059, "QuestionId": 1010, "Name": "VPC with a Private Subnet Only and Hardware VPN Access", "IsAnswer": false}]

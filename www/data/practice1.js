@@ -59,12 +59,12 @@
     },
     {
         "Id": 6,
-        "Name": "You attempt to store an object in the US-STANDARD region in Amazon S3, and receive a confirmation that it has been successfully stored. You then immediately make another API call and attempt to read this object. S3 tells you that the object does not exist. What could explain this behavior? ", 
+        "Name": "You attempt to store an object in the US East (Northern Virginia) Region (formerly US-STANDARD region) in Amazon S3, and receive a confirmation that it has been successfully stored. You then immediately make another API call and attempt to read this object. S3 tells you that the object does not exist. What could explain this behavior? ", 
 
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "US-STANDARD uses eventual consistency and it can take time for an object to be readable in a bucket. ", "IsAnswer": true },
+            { "Id": 1055, "QuestionId": 1010, "Name": "US East (Northern Virginia) Region uses eventual consistency and it can take time for an object to be readable in a bucket. ", "IsAnswer": true },
             { "Id": 1056, "QuestionId": 1010, "Name": "Objects in Amazon S3 do not become visible until they are replicated to a second region. ", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "US-STANDARD imposes a 1 second delay before new objects are readable", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "US East (Northern Virginia) Region imposes a 1 second delay before new objects are readable", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "You exceeded the bucket object limit, and once this limit is raised the object will be visible. ", "IsAnswer": false }]
 
     },
@@ -496,6 +496,31 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "Network In ", "IsAnswer": false},
             { "Id": 1059, "QuestionId": 1010, "Name": "Estimated Charges", "IsAnswer": false}]
 
+    },
+    {
+        "Id": 48,
+        "Name": "Which of the following requires a custom CloudWatch metric to monitor?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Disk full percentage of an Elastic Block Store volume.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Disk usage activity of the ephemeral volumes of an Amazon EC2 instance.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Disk usage activity of an Elastic Block Store volume attached to  an Amazon EC2 instance.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "CPU utilize of an Amazon EC2 instance.", "IsAnswer": false }]
+    },
+    {
+        "Id": 49,
+        "Name": "You are currently hosting multiple applications in a VPC and have logged numerous port scans coming in from a specific IP address block. Your security team has requested that all access from the offending IP address block be denied tor the next 24 hours. Which of the following is the best method to quickly and temporarily deny access from the specified IP address block?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Modify the Network ACLs associated with all public subnets in the VPC to deny access from the IP address block", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Add a rule to all of the VPC 5 Security Groups to deny access from the IP address block.", "IsAnswer": false }]
+    },
+    {
+        "Id": 50,
+        "Name": "An application that you are managing has EC2 instances & DynamoDB tables deployed to several AWS Regions In order to monitor the performance of the application globally, you would like to see two graphs: 1) Avg CPU Utilization across all EC2 instances and 2) Number of Throttled Requests for all DynamoDB tables. How can you accomplish this?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Tag your resources with the application name,and select the tag name as the dimension in the CloudWatch Management Console to view the respective graphs.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use the CloudWatch CLI tools to pull the respective metrics from each regional endpoint. Aggregate the data offline & store it for graphing in CloudWatch.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Add SNMP traps to each instance and DynamoDB table Leverage a central monitoring server to capture data from each instance and table. Put the aggregate data into Cloud Watch for graphing.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Add a CloudWatch agent to each instance and attach one to each DynamoDB table. When configuring the agent set the appropriate application name & view the graphs in CloudWatch.", "IsAnswer": false }]
     }]
 }
 

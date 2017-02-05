@@ -77,7 +77,7 @@
     },
     {
         "Id": 1018,
-        "Name": "What is the maximum number of On-Demand EC2 instances can you run in AWS?", 
+        "Name": "What is the maximum number of On-Demand EC2 instances you can run in AWS?", 
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "10", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "100", "IsAnswer": false },
