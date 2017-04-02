@@ -521,6 +521,63 @@
             { "Id": 1056, "QuestionId": 1010, "Name": "Use the CloudWatch CLI tools to pull the respective metrics from each regional endpoint. Aggregate the data offline & store it for graphing in CloudWatch.", "IsAnswer": true },
             { "Id": 1057, "QuestionId": 1010, "Name": "Add SNMP traps to each instance and DynamoDB table Leverage a central monitoring server to capture data from each instance and table. Put the aggregate data into Cloud Watch for graphing.", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "Add a CloudWatch agent to each instance and attach one to each DynamoDB table. When configuring the agent set the appropriate application name & view the graphs in CloudWatch.", "IsAnswer": false }]
+    },
+    {
+        "Id": 51,
+        "Name": "When preparing for a compliance assessment of your system built inside of AWS, what are three best-practices for you to prepare for an audit? (Choose three.)", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Gather evidence of your IT operational controls.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Request and obtain applicable third-party audited AWS compliance reports and certifications.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Request and obtain a compliance and security tour of an AWS data center for a pre-assessment security review", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Request and obtain approval from AWS to perform relevant network scans and in-depth penetration tests of your system's Instances and endpoints", "IsAnswer": true },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Schedule meetings with AWS's third-party auditors to provide evidence of AWS compliance that maps to your control objectives", "IsAnswer": false }]
+    },
+    {
+        "Id": 52,
+        "Name": "An organization's security policy requires multiple copies of all critical data to be replicated across at least a primary and backup data center. The organization has decided to store some critical data on Amazon S3. Which option should you implement to ensure this requirement is met?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use the S3 copy API to replicate data between two S3 buckets in different regions.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "You do not need to implement anything since S3 data is automatically replicated between regions.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use the S3 copy API to replicate data between two S3 buckets in different facilities within an AWS Region.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "You do not need to implement anything since S3 data is automatically replicated between multiple facilities within an AWS Region.", "IsAnswer": true }],
+            
+            "explanation" : "You specify a region when you create your Amazon S3 bucket. Within that region, your objects are redundantly stored on multiple devices across multiple facilities. Please refer to Regional Products and Services for details of Amazon S3 service availability by region.",
+            "ref":"https://aws.amazon.com/s3/faqs/"
+
+    },
+    {
+        "Id": 53,
+        "Name": "A user wants to encrypt all the objects stored in S3 using server side encryption. The user does not want to use the AES 256 encryption key provided by S3. How can the user achieve this?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "The admin should upload his secret key to the AWS console and let S3 decrypt the objects.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "The admin should use CLI or API to upload the encryption key to the S3 bucket. When making a call to the S3 API mention the encryption key URL in each request.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "S3 does not support client supplied encryption keys for server side encryption.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "The admin should send the keys and encryption algorithm with each API call.", "IsAnswer": true }],
+            
+            "explanation" : "AWS S3 supports client side or server side encryption to encrypt all data at rest. The server side encryption can either have the S3 supplied AES-256 encryption key or the user can send the key along with each API callto supply his own encryption key. Amazon S3 never stores the user's encryption key. The user has to supply it for each encryption or decryption call.",
+            "ref":"https://aws.amazon.com/s3/faqs/"
+    },
+    {
+        "Id": 54,
+        "Name": "A user has created a VPC with public and private subnets using the VPC wizard. Which of the below mentioned statements is not true in this scenario?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "The VPC will create a routing instance and attach it with a public subnet.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "The VPC will create two subnets.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The VPC will create one internet gateway and attach it to VPC.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "The VPC will launch one NAT instance with an elastic IP.", "IsAnswer": false }],
+            
+            "explanation" : "A user can create a subnet with VPC and launch instances inside that subnet. If the user has created a public private subnet, the instances in the public subnet can receive inbound traffic directly from the internet, whereas the instances in the private subnet cannot. If these subnets are created with Wizard, AWS will create a NAT instance with an elastic IP. Wizard will also create two subnets with route tables. It will also create an internet gateway and attach it to the VPC."
+    },
+    {
+        "Id": 55,
+        "Name": "A user is trying to connect to a running EC2 instance using SSH. However, the user gets a connection time out error. Which of the below mentioned options is not a possible reason for rejection?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "The access key to connect to the instance is wrong", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "The security group is not configured properly", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The private key used to launch the instance is not correct", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "The instance CPU is heavily loaded", "IsAnswer": false }],
+            
+            "explanation" : "If the user is trying to connect to a Linux EC2 instance and receives the connection time out error the probable reasons are: 1) Security group is not configured with the SSH port 2) The private key pair is not right 3) The user name to login is wrong 4) The instance CPU is heavily loaded, so it does not allow more connections. Remember 'Access Key' is mainly used for making API Calls, not for ssh'ing to servers."
     }]
 }
 
