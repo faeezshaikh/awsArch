@@ -578,6 +578,30 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "The instance CPU is heavily loaded", "IsAnswer": false }],
             
             "explanation" : "If the user is trying to connect to a Linux EC2 instance and receives the connection time out error the probable reasons are: 1) Security group is not configured with the SSH port 2) The private key pair is not right 3) The user name to login is wrong 4) The instance CPU is heavily loaded, so it does not allow more connections. Remember 'Access Key' is mainly used for making API Calls, not for ssh'ing to servers."
+    },
+    {
+        "Id": 56,
+        "Name": "IAM provides several policy templates you can use to automatically assign permissions to the groups you create. The _____ policy template gives the Admins group permission to access all account resources, except your AWS account information", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Read Only Access", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Power User Access", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "AWS Cloud Formation Read Only Access", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Administrator Access", "IsAnswer": false }],
+            
+            "explanation" : "AWS managed policies are designed to provide permissions for many common use cases. For example, there are AWS managed policies that define typical permissions for administrators (all access), for power users (all access except IAM), and for other various levels of access to AWS services. AWS managed policies make it easier for you to assign appropriate permissions to users, groups, and roles than if you had to write the policies yourself.",
+            "ref":"http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html"
+    },
+    {
+        "Id": 57,
+        "Name": "While performing the volume status checks, if the status is insufficient-data, what does it mean?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "the checks may still be in progress on the volume", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "the check has passed", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "the check has failed", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "there was some problem during the check.", "IsAnswer": false }],
+            
+            "explanation" : "If the status is insufficient-data, the checks may still be in progress on the volume. You can view the results of volume status checks to identify any impaired volumes and take any necessary actions.",
+            "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volumestatus.html#monitoring-volume-checks"
     }]
 }
 
