@@ -602,6 +602,18 @@
             
             "explanation" : "If the status is insufficient-data, the checks may still be in progress on the volume. You can view the results of volume status checks to identify any impaired volumes and take any necessary actions.",
             "ref":"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volumestatus.html#monitoring-volume-checks"
-    }]
+    },
+   {
+        "Id": 58,
+        "Name": "Your organization's security policy requires that all privileged users either use frequently rotated passwords or one-time access credentials in addition to username/password. Which two of the following options would allow an organization to enforce this policy for AWS users? Choose 2 answers", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Configure multi-factor authentication for privileged IAM users", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Create IAM users for privileged accounts", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Implement identity federation between your organization's Identity provider leveraging the IAM Security Token Service", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Enable the IAM single-use password policy option for privileged users", "IsAnswer": false }],
+            "explanation": "IAM does not have single-use password policy and simply creating IAM users for privileged accounts is not sufficient to enforce frequent rotation of passwords",
+            "ref": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html"
+    }
+   ]
 }
 
