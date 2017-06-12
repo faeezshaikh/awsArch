@@ -613,6 +613,27 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "Enable the IAM single-use password policy option for privileged users", "IsAnswer": false }],
             "explanation": "IAM does not have single-use password policy and simply creating IAM users for privileged accounts is not sufficient to enforce frequent rotation of passwords",
             "ref": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html"
+    },
+   {
+        "Id": 59,
+        "Name": "A user has configured ELB with three instances. The user wants to achieve High Availability as well as redundancy with ELB. Which of the below mentioned AWS services helps the user achieve this for ELB?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Route 53", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "AWS Mechanical Turk", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Auto Scaling", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "AWS EMR", "IsAnswer": false }],
+            "explanation": "The question specifically asks HA for the ELB. AutoScaling may only provide HA but not redundancy. Route53 weighted/latency records can be placed to route traffic to the ELB in different regions if needed."
+    },
+   {
+        "Id": 60,
+        "Name": "You have been asked to propose a multi-region deployment of a web-facing application where a controlled portion of your traffic is being processed by an alternate region. Which configuration would achieve that goal?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Route53 record sets with weighted routing policy.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Route53 record sets with latency based routing policy.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Auto Scaling with scheduled scaling actions set.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Elastic Load Balancing with health checks enabled.", "IsAnswer": false }],
+            "explanation": "Use the weighted routing policy when you have multiple resources that perform the same function (for example, web servers that serve the same website) and you want Amazon Route 53 to route traffic to those resources in proportions that you specify (for example, one quarter to one server and three quarters to the other).",
+            "ref": "http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html"
     }
    ]
 }
