@@ -68,7 +68,7 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
 					}
 
 					$ionicModal.fromTemplateUrl('templates/warningModal.html', {
-						scope: $scope
+						scope: $scope,backdropClickToClose:false
 					}).then(function (modal) {
 						$scope.warningModal = modal;
 						$scope.warningModal.show();
