@@ -280,7 +280,7 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
 			$scope.ref = "'" + reference + "'";
 			$scope.explanationTopic = topicId;
 			$ionicModal.fromTemplateUrl('templates/explanationModal.html', {
-				scope: $scope
+				scope: $scope,backdropClickToClose:false
 			}).then(function (modal) {
 				$scope.explModal = modal;
 				$scope.explModal.show();

@@ -634,6 +634,17 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "Elastic Load Balancing with health checks enabled.", "IsAnswer": false }],
             "explanation": "Use the weighted routing policy when you have multiple resources that perform the same function (for example, web servers that serve the same website) and you want Amazon Route 53 to route traffic to those resources in proportions that you specify (for example, one quarter to one server and three quarters to the other).",
             "ref": "http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html"
+    },
+   {
+        "Id": 61,
+        "Name": "An existing application stores sensitive information on a non-boot Amazon EBS data volume attached to an Amazon Elastic Compute Cloud instance. Which of the following approaches would protect the sensitive data on an Amazon EBS volume?", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Upload your customer keys to AWS CloudHSM. Associate the Amazon EBS volume with AWS CloudHSM. Re- mount the Amazon EBS volume.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Create and mount a new, encrypted Amazon EBS volume. Move the data to the new volume. Delete the old Amazon EBS volume.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Unmount the EBS volume. Toggle the encryption attribute to True. Re-mount the Amazon EBS volume.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS  volume. Mount the Amazon EBS volume.", "IsAnswer": false }],
+            "explanation": "To migrate data between encrypted and unencrypted volumes the correct steps to follow are: 1. Create your destination volume (encrypted or unencrypted, depending on your need) by following the procedures in Creating an Amazon EBS Volume. 2. Attach the destination volume to the instance that hosts the data to migrate. For more information, see Attaching an Amazon EBS Volume to an Instance. procedures in Making an Amazon EBS Volume Available for Using. For Linux instances, you can create a mount point at /mnt/destination and mount the destination volume there. 4. Copy the data from your source directory to the destination volume. It may be most convenient to use a bulkcopy utility for this.",
+            "ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html"
     }
    ]
 }
