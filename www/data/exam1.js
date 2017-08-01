@@ -640,6 +640,16 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "File Transfer Protocol", "IsAnswer": false },
             { "Id": 1058, "QuestionId": 1010, "Name": "Simple Network Management Protocol", "IsAnswer": false }]
         
+    } ,
+     {
+        "Id": 61,
+        "Name": "Your company policies require encryption of sensitive data at rest. You are considering the possible options for protecting data while storing it at rest on an EBS data volume, attached to an EC2 instance. Which of these options would allow you to encrypt your data at rest? Choose 3 answers", 
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Implement third party volume encryption tools", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Implement SSL/TLS for all services running on the server", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Encrypt data inside your applications before storing it on EBS", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Encrypt data using native data encryption drivers at the file system level", "IsAnswer": true },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Do nothing as EBS volumes are encrypted by default", "IsAnswer": false }]
     }]
 }
 

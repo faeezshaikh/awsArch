@@ -625,6 +625,14 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "Mark the S3 bucket private and allow access to CloudFront by means of Roles", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "Mark the S3 bucket private and and create an Origin Access Identity to access the objects", "IsAnswer": true}]
 
+    },
+    {
+        "Id": 61,
+        "Name": "You cannot create multiple VPC's within one CloudFormation Template", 
+        
+        "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "True", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "False", "IsAnswer": true }]
     }
     ]
 }
