@@ -116,12 +116,13 @@
     },
      {
         "Id": 12,
-        "Name": "The maximum size of a General Purpose or SSD EBS  storage device is:", 
+        "Name": "Which of the following will occur when an EC2 instance in a VPC with an associated Elastic IP is stopped and started? (Choose 2 answers)", 
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "100 GB", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "1 TB", "IsAnswer": true },
-            { "Id": 1056, "QuestionId": 1010, "Name": "500 GB", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "10 TB", "IsAnswer": false }]
+            { "Id": 1055, "QuestionId": 1010, "Name": "The Elastic IP will be dissociated from the instance.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "All data on instance-store devices will be lost.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "All data on EBS (Elastic Block Store) devices will be lost.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "The ENI (Elastic Network Interface) is detached.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The underlying host for the instance is changed.", "IsAnswer": true }]
         
     },
      {
@@ -226,27 +227,28 @@
     },
      {
         "Id": 22,
-       "Name": "Currently there are ______ regions in AWS.",  
+       "Name": "What are the different types of virtualization available on EC2?",  
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "20", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "14", "IsAnswer": true },
-            { "Id": 1057, "QuestionId": 1010, "Name": "40", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "30", "IsAnswer": false}],
+            { "Id": 1055, "QuestionId": 1010, "Name": "Pseudo-Virtual (PV) & Hardware Virtual Module (HSM)", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Para-Virtual (PV) & Hardware Virtual Machine (HVM)", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Pseudo-Virtual (PV) & Hardware Virtual Machine (HVM)", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Para-Virtual (PV) & Hardware Virtual Module (HSM)", "IsAnswer": false}],
             
-            "explanation" : "The AWS Cloud operates 38 Availability Zones within 14 geographic Regions around the world, with nine more Availability Zones and four more Regions coming online throughout the next year.",
-            "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
+            "explanation" : "Linux Amazon Machine Images use one of two types of virtualization: paravirtual (PV) or hardware virtual machine (HVM). The main difference between PV and HVM AMIs is the way in which they boot and whether they can take advantage of special hardware extensions (CPU, network, and storage) for better performance.",
+            "ref":"https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/virtualization_types.html"
         
     },
      {
         "Id": 23,
-       "Name": "The AWS Cloud operates ________ Availability Zones", 
+       "Name": "After creating a new AWS account, you use the API to request 40 on-demand EC2 instances in a single AZ. After 20 successful requests, subsequent requests failed. What could be a reason for this issue, and how would you resolve it?", 
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "45", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "35", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "38", "IsAnswer": true }],
+            { "Id": 1055, "QuestionId": 1010, "Name": "You encountered a soft limit of 20 instances per region. Submit the limit increase form and retry the failed requests once approved.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "AWS allows you to provision no more than 20 instances per Availability Zone. Select a different Availability Zone and retry the failed request.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "You need to use Amazon Virtual Private Cloud (VPC) in order to provision more than 20 instances in a single Availability Zone. Simply terminate the resources already provisioned and re-launch them all in a VPC.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "You encountered an API throttling situation and should try the failed requests using an exponential decay retry algorithm.", "IsAnswer": false }],
             
-            "explanation" : "The AWS Cloud operates 38 Availability Zones within 14 geographic Regions around the world, with nine more Availability Zones and four more Regions coming online throughout the next year.",
-            "ref":"https://aws.amazon.com/about-aws/global-infrastructure/"
+            "explanation" : "You encountered a soft limit of 20 instances per region. Submit the limit increase form and retry the failed requests once approved.",
+            "ref":"https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2"
         
     },
      {
