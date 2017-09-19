@@ -645,7 +645,17 @@
             { "Id": 1058, "QuestionId": 1010, "Name": "Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS  volume. Mount the Amazon EBS volume.", "IsAnswer": false }],
             "explanation": "To migrate data between encrypted and unencrypted volumes the correct steps to follow are: 1. Create your destination volume (encrypted or unencrypted, depending on your need) by following the procedures in Creating an Amazon EBS Volume. 2. Attach the destination volume to the instance that hosts the data to migrate. For more information, see Attaching an Amazon EBS Volume to an Instance. procedures in Making an Amazon EBS Volume Available for Using. For Linux instances, you can create a mount point at /mnt/destination and mount the destination volume there. 4. Copy the data from your source directory to the destination volume. It may be most convenient to use a bulkcopy utility for this.",
             "ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html"
-    }
+    },
+    {
+         "Id": 62,
+         "Name": "A read only news reporting site with a combined web and application tier and a database tier that receives large and unpredictable traffic demands must be able to respond to these traffic fluctuations automatically. What AWS services should be used meet these requirements?", 
+        "Options": [
+             { "Id": 1055, "QuestionId": 1010, "Name": "Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch, and RDS with read replicas", "IsAnswer": true},
+             { "Id": 1056, "QuestionId": 1010, "Name": "Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch, and multi-AZ RDS", "IsAnswer": true},
+             { "Id": 1057, "QuestionId": 1010, "Name": "Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch, and RDS with read replicas", "IsAnswer": false },
+             { "Id": 1058, "QuestionId": 1010, "Name": "Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch, and multi-AZ RDS", "IsAnswer": false }],
+             "explanation": "'A readonly reporting site' - so stateless and read-replicas can be used to scale. Multi-AZ will not provide the scaling requirements."
+     }
    ]
 }
 
