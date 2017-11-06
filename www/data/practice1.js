@@ -655,7 +655,18 @@
              { "Id": 1057, "QuestionId": 1010, "Name": "Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch, and RDS with read replicas", "IsAnswer": false },
              { "Id": 1058, "QuestionId": 1010, "Name": "Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch, and multi-AZ RDS", "IsAnswer": false }],
              "explanation": "'A readonly reporting site' - so stateless and read-replicas can be used to scale. Multi-AZ will not provide the scaling requirements."
-     }
+     },
+     {
+          "Id": 63,
+          "Name": "You are designing a data leak prevention solution for your VPC environment. You want your VPC instances to be able to access software depots and distributions on the Internet for product updates. The depots and distributions are accessible via third party CDNs by their URLs. You want to explicitly deny any other outbound connections from your VPC instances to hosts on the Internet. Which of the following options would you consider?", 
+         "Options": [
+              { "Id": 1055, "QuestionId": 1010, "Name": "Implement security groups and configure outbound rules to only permit traffic to software depots.", "IsAnswer": false},
+              { "Id": 1056, "QuestionId": 1010, "Name": "Configure a web proxy server in your VPC and enforce URL-based rules for outbound access. Remove default routes.", "IsAnswer": true},
+              { "Id": 1057, "QuestionId": 1010, "Name": "Implement network access control lists to allow specific destinations, with an implicit deny all rule.", "IsAnswer": false },
+              { "Id": 1058, "QuestionId": 1010, "Name": "Move all your instances into private VPC subnets. Remove default routes from all routing tables and add specific routes to the software depots and distributions only.", "IsAnswer": false }],
+              "explanation": "Best practices are usually to implement proxy solutions to provide URL and web content filtering, IDS/IPS, data loss prevention, monitoring, and advanced threat protection.",
+              "ref": "https://d0.awsstatic.com/aws-answers/Controlling_VPC_Egress_Traffic.pdf"
+      }
    ]
 }
 
