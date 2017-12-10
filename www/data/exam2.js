@@ -635,7 +635,18 @@
         "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "True", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "False", "IsAnswer": true }]
-    }
+    },
+    {
+       "Id": 62,
+       "Name": "You are looking to migrate your Development (Dev) and Test environments to AWS. You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing. To make sure you keep within budget you would like to implement a way for administrators in the Master account to have access to stop, delete and/or terminate resources in both the Dev and Test accounts. Identify which option will allow you to achieve this goal.", 
+       "Options": [
+           { "Id": 1055, "QuestionId": 1010, "Name": "Create IAM users in the Master account with full Admin permissions. Create cross-account roles  in the Dev and Test accounts that grant the Master account access to the resources in the  account by inheriting permissions from the Master account.", "IsAnswer": false },
+           { "Id": 1056, "QuestionId": 1010, "Name": "Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts.", "IsAnswer": false },
+           { "Id": 1057, "QuestionId": 1010, "Name": "Create IAM users in the Master account create cross-account roles in the Dev and Test accounts that have full Admin permissions and  grant the Master account access.", "IsAnswer": true},
+           { "Id": 1058, "QuestionId": 1010, "Name": "Link the accounts using Consolidated Billing. This will give IAM users in the Master account  access to resources in the Dev and Test accounts", "IsAnswer": false }],
+           "explanation" : "Create role which have admin permission in the Dev and Test account, and grant that role for the Master account. Then, users in the Master account that have “AssumeRole” permission can switch to the role created in Dev and Test.",
+           "ref":"http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html"
+   }
     ]
 }
 

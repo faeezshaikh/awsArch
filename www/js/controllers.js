@@ -48,13 +48,13 @@ angular.module('starter.controllers', ['socialShareModule', 'firebase'])
 				practiceExam = true;
 
 				if ($scope.showTimer) {
-					$scope.timer = 3600;  // 60 minutes for practice exam
+					$scope.timer = 4800;  // 80 minutes for practice exam
 				}
 
 				// Show a warning modal first
 				if (warned) {
 					// If warned, show the timer and set appropriate time.
-					$scope.timer = 3600;  // 60 minutes for practice exam
+					$scope.timer = 4800;  // 80 minutes for practice exam
 					$scope.showTimer = true;
 
 					if (examTopic == 300 || examTopic == 200) {

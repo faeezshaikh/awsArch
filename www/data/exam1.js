@@ -650,6 +650,18 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "Encrypt data inside your applications before storing it on EBS", "IsAnswer": true },
             { "Id": 1058, "QuestionId": 1010, "Name": "Encrypt data using native data encryption drivers at the file system level", "IsAnswer": true },
             { "Id": 1059, "QuestionId": 1010, "Name": "Do nothing as EBS volumes are encrypted by default", "IsAnswer": false }]
-    }]
+    } ,
+    {
+       "Id": 62,
+       "Name": "A company is storing data on Amazon Simple Storage Service (S3). The company's security policy mandates that data is encrypted at rest. Which of the following methods can achieve this? Choose 3 answers", 
+       "Options": [
+           { "Id": 1055, "QuestionId": 1010, "Name": "Use Amazon S3 server-side encryption with AWS Key Management Service managed keys.", "IsAnswer": true},
+           { "Id": 1056, "QuestionId": 1010, "Name": "Use Amazon S3 server-side encryption with customer-provided keys.", "IsAnswer": true},
+           { "Id": 1057, "QuestionId": 1010, "Name": "Use Amazon S3 server-side encryption with EC2 key pair.", "IsAnswer": false },
+           { "Id": 1058, "QuestionId": 1010, "Name": "Use Amazon S3 bucket policies to restrict access to the data at rest.", "IsAnswer": false },
+           { "Id": 1059, "QuestionId": 1010, "Name": "Encrypt the data on the client-side before ingesting to Amazon S3 using their own master key.", "IsAnswer": true},
+           { "Id": 1060, "QuestionId": 1010, "Name": "Use SSL to encrypt the data while in transit to Amazon S3.", "IsAnswer": false }],
+           "explanation" : "1) S3 Server-side encryption with EC2 key pair doesnt make sense 2) Bucket policies do not help with encryption, so this is also not the correct option 3) SSL to encrypt in transit does not satisfy the requirement to encrypt at rest. Hence by process of elimination the remaining three options are correct"
+   }]
 }
 
