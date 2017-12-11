@@ -1,7 +1,7 @@
 {
-    "name": "AWS-Dev",
+    "name": "AWSArch",
     "version": "1.0.0",
-    "description": "AWS-Dev: An AWS project",
+    "description": "AWS-Arch: An AWS project",
     "dependencies": {
         "cordova-ios": "^4.4.0",
         "gulp": "^3.5.6",
