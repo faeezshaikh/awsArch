@@ -1,7 +1,7 @@
 Publishing:
 http://ionicframework.com/docs/guide/publishing.html
 
-sudo cordova build --release android	
+sudo ionic cordova build --release android	
 
 (Already generated - do not lose - If Key not already present)
 keytool -genkey -v -keystore  awsArch-key.keystore -alias awsArch- -keyalg RSA -keysize 2048 -validity 100000
@@ -11,7 +11,7 @@ cp /Users/faeezshaikh/git/awsArch/platforms/android/build/outputs/apk/android-re
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore awsArch-key.keystore android-release-unsigned.apk awsArch-
 
 C:\Users\FSHAI\AppData\Local\Android\android-sdk\build-tools\23.0.1\zipalign -v 4 android-release-unsigned.apk AWS-Certified-Arch.apk
-/Users/faeezshaikh/Library/Android/sdk/build-tools/23.0.2/zipalign -v 4 android-release-unsigned.apk AWS-Certified-Arch.apk
+/Users/faeezshaikh/Library/Android/sdk/build-tools/27.0.0/zipalign -v 4 android-release-unsigned.apk AWS-Certified-Arch.apk
 
 
 ---------------------
@@ -152,3 +152,5 @@ Next Release
     },
     
 */
+
+npm install node-sass@beta

@@ -1,44 +1,58 @@
 {
-    "name": "AWSArch",
-    "version": "1.0.0",
-    "description": "AWS-Arch: An AWS project",
-    "dependencies": {
-        "cordova-ios": "^4.4.0",
-        "gulp": "^3.5.6",
-        "gulp-concat": "^2.2.0",
-        "gulp-minify-css": "^0.3.0",
-        "gulp-rename": "^1.2.0",
-        "gulp-sass": "^2.0.4",
-        "ionic-cli": "3.10.3",
-        "cordova-android": "~5.1.1"
-    },
-    "devDependencies": {
-        "@ionic/cli-plugin-cordova": "1.6.2",
-        "@ionic/cli-plugin-gulp": "1.1.1",
-        "@ionic/cli-plugin-ionic1": "2.1.1",
-        "bower": "^1.3.3",
-        "gulp-util": "^2.2.14",
-        "ionic": "3.16.0",
-        "shelljs": "^0.3.0"
-    },
-    "cordovaPlugins": [
-        "cordova-plugin-device",
-        "cordova-plugin-console",
-        "cordova-plugin-whitelist",
-        "cordova-plugin-statusbar",
-        "ionic-plugin-keyboard",
-        "org.apache.cordova.device",
-        "org.apache.cordova.inappbrowser",
-        "cordova-plugin-splashscreen"
+  "name": "AWSArch",
+  "version": "1.0.0",
+  "description": "AWS-Arch: An AWS project",
+  "dependencies": {
+    "cordova-android": "6.3.0",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-console": "~1.1.0",
+    "cordova-plugin-device": "~1.1.7",
+    "cordova-plugin-splashscreen": "~4.1.0",
+    "cordova-plugin-statusbar": "~2.3.0",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "node-sass": "^4.4.0",
+    "cordova-plugin-whitelist": "~1.3.3"
+  },
+  "devDependencies": {
+    "@ionic/cli-plugin-cordova": "1.6.2",
+    "@ionic/cli-plugin-gulp": "1.1.1",
+    "@ionic/cli-plugin-ionic1": "2.1.1",
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "ionic": "3.19.0",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    "org.apache.cordova.device",
+    "org.apache.cordova.inappbrowser",
+    "cordova-plugin-splashscreen"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ],
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android"
     ],
-    "cordovaPlatforms": [
-        "ios",
-        "android"
-    ],
-    "cordova": {
-        "platforms": [
-            "android",
-            "ios"
-        ]
+    "plugins": {
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-whitelist": {}
     }
+  }
 }
