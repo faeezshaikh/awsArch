@@ -666,7 +666,18 @@
               { "Id": 1058, "QuestionId": 1010, "Name": "Move all your instances into private VPC subnets. Remove default routes from all routing tables and add specific routes to the software depots and distributions only.", "IsAnswer": false }],
               "explanation": "Best practices are usually to implement proxy solutions to provide URL and web content filtering, IDS/IPS, data loss prevention, monitoring, and advanced threat protection.",
               "ref": "https://d0.awsstatic.com/aws-answers/Controlling_VPC_Egress_Traffic.pdf"
-      }
+      },
+      {
+           "Id": 64,
+           "Name": "You are looking to migrate your Development (Dev) and Test environments to AWS. You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing. To make sure you Keep within budget you would like to implement a way for administrators in the Master account to have access to stop, delete and/or terminate resources in both the Dev and Test accounts. Identify which option will allow you to achieve this goal.", 
+          "Options": [
+               { "Id": 1055, "QuestionId": 1010, "Name": "Create IAM users in the Master account with full Admin permissions. Create cross-account roles in the Dev and Test accounts that grant the Master account access to the resources in the account by inheriting permissions from the Master account.", "IsAnswer": false},
+               { "Id": 1056, "QuestionId": 1010, "Name": "Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts.", "IsAnswer": false},
+               { "Id": 1057, "QuestionId": 1010, "Name": "Create IAM users in the Master account Create cross-account roles in the Dev and Test accounts that have full Admin permissions and grant the Master account access.", "IsAnswer": true},
+               { "Id": 1058, "QuestionId": 1010, "Name": "Link the accounts using Consolidated Billing. This will give IAM users in the Master account access to resources in the Dev and Test accounts", "IsAnswer": false }],
+               "explanation": "In consolidated billing, the master account does not by default have access to resources in the linked accounts. Best practice is to use IAM users and cross-account roles to let the master account have access to linked account's resources.",
+               "ref": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
+       }
    ]
 }
 
