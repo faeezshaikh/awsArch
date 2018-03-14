@@ -677,7 +677,18 @@
                { "Id": 1058, "QuestionId": 1010, "Name": "Link the accounts using Consolidated Billing. This will give IAM users in the Master account access to resources in the Dev and Test accounts", "IsAnswer": false }],
                "explanation": "In consolidated billing, the master account does not by default have access to resources in the linked accounts. Best practice is to use IAM users and cross-account roles to let the master account have access to linked account's resources.",
                "ref": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
-       }
+       },
+       {
+            "Id": 65,
+            "Name": "What is the name of licensing model in which I can use your existing Oracle Database licenses to run Oracle deployments on Amazon RDS?", 
+           "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Bring Your Own License", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Role Bases License", "IsAnswer": false},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Enterprise License", "IsAnswer": false},
+                { "Id": 1058, "QuestionId": 1010, "Name": "License Included", "IsAnswer": false }],
+                "explanation": "Its called 'BYOL'. Bring your own License.",
+                "ref": "https://aws.amazon.com/oracle/"
+        }
    ]
 }
 
