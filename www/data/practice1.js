@@ -688,7 +688,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "License Included", "IsAnswer": false }],
                 "explanation": "Its called 'BYOL'. Bring your own License.",
                 "ref": "https://aws.amazon.com/oracle/"
-        }
+        },
+        {
+             "Id": 66,
+             "Name": "A company is developing a highly available web application using stateless web servers. Which services are suitable for storing session state data? (Select TWO.)", 
+            "Options": [
+                 { "Id": 1055, "QuestionId": 1010, "Name": "CloudWatch", "IsAnswer": false},
+                 { "Id": 1056, "QuestionId": 1010, "Name": "DynamoDB", "IsAnswer": true},
+                 { "Id": 1057, "QuestionId": 1010, "Name": "Elastic Load Balancing", "IsAnswer": false},
+                 { "Id": 1058, "QuestionId": 1010, "Name": "ElastiCache", "IsAnswer": true },
+                 { "Id": 1058, "QuestionId": 1010, "Name": "Storage Gateway", "IsAnswer": false }],
+                "explanation": "Both DynamoDB and ElastiCache provide high performance storage of key-value pairs. CloudWatch and ELB are not storage services. Storage Gateway is a storage service, but it is a hybrid storage service that enables on-premises applications to use cloud storage."
+         }
    ]
 }
 

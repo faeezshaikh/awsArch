@@ -97,6 +97,20 @@
        "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "True", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "False. Once enabled you can only suspend", "IsAnswer": true }]
+    },
+    {
+        "Id": 11,
+        "Name": "Company salespeople upload their sales figures daily. A Solutions Architect needs a durable storage solution for these documents that also protects against users accidentally deleting important documents. Which action will protect against unintended user actions? ", 
+       "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Store data in an EBS volume and create snapshots once a week. ", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Store data in an S3 bucket and enable versioning. ", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Store data in two S3 buckets in different AWS regions.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Store data on EC2 instance storage.", "IsAnswer": false }],
+            "explanation":"If a versioned object is deleted, then it can still be recovered by retrieving the final version. Using EBS volumes would lose any changes committed since the previous snapshot. Storing the data in 2 S3 buckets would provide slightly more protection, but a user could still delete the object from both buckets. EC2 instance storage is ephemeral and should never be used for data requiring durability."
     }
      ]
 }
+
+
+
+

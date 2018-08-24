@@ -48,7 +48,7 @@ angular.module('starter')
                 { title: 'RDS', desc:'Relational Database Service', id: 2 ,url:'data/img/RDS.png',tagline:'11 questions, 15 minutes'},
                 { title: 'IAM', desc:'Identity and Access Management', id: 3 ,url:'data/img/IAM.png',tagline:'11 questions, 15 minutes'},
                 { title: 'EC2', desc:'Elastic Compute Cloud', id: 4 ,url:'data/img/EC2.png',tagline:'11 questions, 15 minutes'},
-                { title: 'S3',desc:'Simple Storage Service',  id: 5 ,url:'data/img/S3.png',tagline:'10 questions, 15 minutes'},
+                { title: 'S3',desc:'Simple Storage Service',  id: 5 ,url:'data/img/S3.png',tagline:'11 questions, 15 minutes'},
                 { title: 'VPC', desc:'Subnets, NACLs, Gateways, IPs', id: 6 ,url:'data/img/VPC.png',tagline:'11 questions, 15 minutes'},
                 { title: 'Elastic Beanstalk', desc:'Easy to begin, Impossible to outgrow', id: 7 ,url:'data/img/ElasticBeanstalk.png',tagline:'10 questions, 15 minutes'},
                 { title: 'SQS',desc:'Simpe Queue Service',  id: 8 ,url:'data/img/SQS.png',tagline:'10 questions, 15 minutes'},
