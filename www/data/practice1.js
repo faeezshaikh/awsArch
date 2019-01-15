@@ -699,7 +699,17 @@
                  { "Id": 1058, "QuestionId": 1010, "Name": "ElastiCache", "IsAnswer": true },
                  { "Id": 1058, "QuestionId": 1010, "Name": "Storage Gateway", "IsAnswer": false }],
                 "explanation": "Both DynamoDB and ElastiCache provide high performance storage of key-value pairs. CloudWatch and ELB are not storage services. Storage Gateway is a storage service, but it is a hybrid storage service that enables on-premises applications to use cloud storage."
-         }
+         },
+         {
+              "Id": 67,
+              "Name": "You are planning to build a fleet of EBS-optimized EC2 instances for your new application. Due to security compliance, your organization wants you to encrypt root volume which is used to boot the instances. How can this be achieved?", 
+             "Options": [
+                  { "Id": 1055, "QuestionId": 1010, "Name": "Select Encryption option for the root EBS volume while launching EC2 instance.", "IsAnswer": false},
+                  { "Id": 1056, "QuestionId": 1010, "Name": "Once the EC2 instances are launched, encrypt the root volume using AWS KMS Master Key.", "IsAnswer": false},
+                  { "Id": 1057, "QuestionId": 1010, "Name": "Root volumes cannot be encrypted. Add another EBS volume with encryption option selected during launch. Once EC2 instances are launched, make encrypted EBS volume as root volume through the console.", "IsAnswer": false},
+                  { "Id": 1058, "QuestionId": 1010, "Name": "Launch an unencrypted EC2 instance and create a snapshot of the root volume. Make a copy of the snapshot with the encryption option selected and CreateImage using encrypted snapshot. Use this image to launch EC2 instances.", "IsAnswer": true }],
+                 "explanation": "When launching an EC2 instance, the EBS volume for root cannot be encrypted. You can launch the instance with unencrypted root volume and create a snapshot of the root volume. Once the snapshot is created, you can copy the snapshot where you can make the new snapshot encrypted."
+          }
    ]
 }
 
